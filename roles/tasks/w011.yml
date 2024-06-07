@@ -7,4 +7,4 @@
     - name: A task with old loop style
       ansible.builtin.debug:
         msg: "{{ item }}"
-      with_items: "{{ items }}"
+      loop: "{{ items |flatten(levels=1) }}"
