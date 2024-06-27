@@ -7,6 +7,6 @@
     - name: Install python and go
       ansible.builtin.package:
         name: "{{ item }}"
-      with_items:
+      loop:
         - python
         - go
