@@ -7,12 +7,13 @@
   tasks:
     - name: Check for module FQCN
       register: x
-      ec2_instance:
+      amazon.aws.ec2_instance:
         state: running
         name: my_ec2
         region: us-east-1
         aws_access_key: "123"
         aws_secret_key: abc
+
     - name: Check for deprecated module
-      ec2_asg:
+      amazon.aws.autoscaling_group:
         name: test
