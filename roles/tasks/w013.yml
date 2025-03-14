@@ -7,4 +7,4 @@
     - name: Install python
       ansible.builtin.yum:
         name: "{{ name }}"
-        allow_downgrade: "YES"
+        allow_downgrade: true
