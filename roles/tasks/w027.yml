@@ -12,5 +12,3 @@
       ansible.builtin.file:
         state: touch
         path: /tmp/file1
-        group: root
-        mode: "0755"
